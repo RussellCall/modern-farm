@@ -1,13 +1,8 @@
 export const createAsparagus = () => {
-    const corn = []
-
-    for (let index = 0; index < 3; index++) {
-        const row = []
-        for (let j = 0; j < 6; j++) {
-            row.push(crop.next().value)
-        }
-        corn.push(row)
+    const asparagusSeed = {
+        type: "asparagus",
+        height: 24,
+        output: 4
     }
-
-    return corn
+    return asparagusSeed
 }
