@@ -1,7 +1,7 @@
 //Define a variable with initial value being an empty array
     //The array will store plants growing in the field.
 
-const fieldOfPlants = []
+const fieldOfPlants = [];
 
 
 //Define and export a function named addPlant.
@@ -16,14 +16,14 @@ export const addPlant = (seedObj) => {
     } else {
         field.push(seedObj)
     }
-}
+};
 
 //Define and export a function named usePlants.
     //Returns a copy of the array of plants.
 export const usePlants = () => {
     const fieldOfPlantsCopy = fieldOfPlants.map(seedObj => ({...seedObj}) )
         return fieldOfPlantsCopy
-}
+};
 
 /* companies.map( => ({...company}))
     return companiesCopy

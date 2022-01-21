@@ -3,12 +3,10 @@
 //Define and export a plantSeeds function.
     //Function must accept the year's planting plan as input.
     //(plantingPlan is a parameter).
-export const plantSeeds = (plan) => {
+export const plantSeeds = (newCreatePlan) => {
     
 
 };
-
-plantingPlan = 
 
 
 /* Example growing plan. Actual plan is bigger.
@@ -18,3 +16,4 @@ plantingPlan =
     ["Asparagus", "Wheat", "Soybean", "Corn"],
     ["Asparagus", "Soybean", "Potato", "Wheat"]
 ]  */
+
