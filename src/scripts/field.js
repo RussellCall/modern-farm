@@ -15,13 +15,19 @@ export const addPlant = (seedObj) => {
         }
     } else {
         field.push(seedObj)
-        return seedObj
     }
 }
 
 //Define and export a function named usePlants.
     //Returns a copy of the array of plants.
+export const usePlants = () => {
+    const fieldOfPlantsCopy = fieldOfPlants.map(seedObj => ({...seedObj}) )
+        return fieldOfPlantsCopy
+}
 
+/* companies.map( => ({...company}))
+    return companiesCopy
+} */
 
 
     /*---.When planting corn, an array of 
