@@ -1,20 +1,10 @@
+import { usePlants } from "./field.js";
 import {createAsparagus} from "./seeds/asparagus.js";
-const asparagusSeed = createAsparagus();
-
 import {createCorn} from "./seeds/corn.js";
-const cornSeed = createCorn();
-
 import {createPotato} from "./seeds/potato.js";
-const potatoSeed = createPotato();
-
 import {createSoybean} from "./seeds/soybean.js";
-const soybeanSeed = createSoybean();
-
 import {createSunflower} from "./seeds/sunflower.js";
-const sunflowerSeed = createSunflower();
-
 import {createWheat} from "./seeds/wheat.js";
-const wheatSeed = createWheat();
 
 
 
@@ -22,16 +12,16 @@ const wheatSeed = createWheat();
 //Define and export a plantSeeds function.
     //Function must accept the year's planting plan as input.
     //(plantingPlan is a parameter).
-export const plantSeeds = (newCreatePlan) => {
+export const plantSeeds = (mainPlan) => {
     
 
 }
-for (const plan of plantingPlan) {
-    for (const plantType of plan) {
-        if (plantType === "asparagus") {
+for (const subPlan of mainPlan) {
+    for (const plantType of subPlan) {
+        if (sunPlan === "asparagus") {
             const asparagusSeed = createAsparagus()
         }
-        if (plantType === "corn") {
+        else (plantType === "corn") {
             const cornSeed = createCorn()
         }
         if (plantType === "potato") {
@@ -47,7 +37,12 @@ for (const plan of plantingPlan) {
             const wheatSeed = createWheat()
         }
     }
+    return usePlants
 }
+
+
+
+
 
 
 
