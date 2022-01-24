@@ -1,4 +1,4 @@
-import { usePlants } from "./field.js";
+import {addPlant, usePlants } from "./field.js";
 import {createAsparagus} from "./seeds/asparagus.js";
 import {createCorn} from "./seeds/corn.js";
 import {createPotato} from "./seeds/potato.js";
@@ -18,22 +18,22 @@ export const plantSeeds = (mainPlan) => {
 }
 for (const subPlan of mainPlan) {
     for (const plantType of subPlan) {
-        if (sunPlan === "asparagus") {
+        if (subPlan === "asparagus") {
             const asparagusSeed = createAsparagus()
         }
-        else (plantType === "corn") {
+        else if (plantType === "corn") {
             const cornSeed = createCorn()
         }
-        if (plantType === "potato") {
+        else if (plantType === "potato") {
             const potatoSeed = createPotato()
         }
-        if (plantType === "soybean") {
+        else if (plantType === "soybean") {
             const soybeanSeed = createSoybean()
         }
-        if (plantType === "sunflower") {
+        else if (plantType === "sunflower") {
             const sunflowerSeed = createSunflower()
         }
-        if (plantType === "wheat") {
+        else if (plantType === "wheat") {
             const wheatSeed = createWheat()
         }
     }
