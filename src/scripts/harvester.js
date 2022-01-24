@@ -11,8 +11,8 @@ export const harvestPlants = (plantsArray) => {
         //On each plant, get the value of the output property.
         if (plant.type === "corn") {
 
-            const cropOutput = plant.output / 2
-            for (let i = 0; i< corn.output; i++) {
+            const cornOutput = plant.output / 2
+            for (let i = 0; i< cornOutput; i++) {
 
                 seedObjects.push(plant)
             }
@@ -23,6 +23,6 @@ export const harvestPlants = (plantsArray) => {
                 seedObjects.push(plant)
             }
         }
-        
+
     }return seedObjects
 };
