@@ -20,24 +20,30 @@ for (const subPlan of mainPlan) {
     for (const plantType of subPlan) {
         if (subPlan === "asparagus") {
             const asparagusSeed = createAsparagus()
+            addPlant(asparagusSeed)
         }
         else if (plantType === "corn") {
             const cornSeed = createCorn()
+            addPlant(cornSeed)
         }
         else if (plantType === "potato") {
             const potatoSeed = createPotato()
+            addPlant(potatoSeed)
         }
         else if (plantType === "soybean") {
             const soybeanSeed = createSoybean()
+            addPlant(soybeanSeed)
         }
         else if (plantType === "sunflower") {
             const sunflowerSeed = createSunflower()
+            addPlant(sunflowerSeed)
         }
         else if (plantType === "wheat") {
             const wheatSeed = createWheat()
+            addPlant(wheatSeed)
         }
     }
-    return usePlants
+    return usePlants()
 }
 
 
