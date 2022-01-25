@@ -1,5 +1,5 @@
 console.log("Welcome to the main module")
-import { addPlant } from "./field.js";
+import { addPlant, usePlants } from "./field.js";
 import { createPlan } from "./plan.js";
 
 
@@ -21,7 +21,6 @@ const seedObj = {
 };
 
 //imports needed for follow up function.
-import { addPlant, usePlants } from "./field.js";
 import { plantSeeds } from "./tractor.js";
 
 let morePlants = addPlant(seedObj)
