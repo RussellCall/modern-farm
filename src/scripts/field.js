@@ -1,13 +1,15 @@
 //Define a variable with initial value being an empty array
     //The array will store plants growing in the field.
 
-export const fieldOfPlants = [];
+export const field = [];
 
 
 //Define and export a function named addPlant.
 //addPlant function must accept a seed object as input.
     //Function will add the seed to the field.
 export const addPlant = (seedObj) => {
+
+
     //"Investigate the "Array.isArray" method to check if corn got passed in"
     if (seedObj === Array.isArray(seedObj)) {
         for (const corn of seedObj) {
@@ -21,8 +23,8 @@ export const addPlant = (seedObj) => {
 //Define and export a function named usePlants.
     //Returns a copy of the array of plants.
 export const usePlants = () => {
-    const fieldOfPlantsCopy = fieldOfPlants.map(seedObj => ({...seedObj}) )
-        return fieldOfPlantsCopy
+    const fieldCopy = field.map(seedObj => ({...seedObj}) )
+        return fieldCopy
 };
 
 /* companies.map( => ({...company}))

@@ -1,37 +1,18 @@
-console.log("Welcome to the main module")
-import { addPlant, usePlants } from "./field.js";
 import { createPlan } from "./plan.js";
+const yearlyPlan = createPlan()
+console.log(yearlyPlan)
 
-
-export const newCreatePlan = createPlan() 
-
-console.log(newCreatePlan);
+import { createCorn } from "./seeds/corn.js";
+const cornPlan = createCorn()
 
 import { createAsparagus } from "./seeds/asparagus.js"
+const asparagusPlan = createAsparagus()
 
-const asparagusSeed = createAsparagus()
-console.log(asparagusSeed)
-
-//Create seed object
-
-const seedObj = {
-    type: "seed object",
-    height: 2,
-    output: 5
-};
-
-//imports needed for follow up function.
 import { plantSeeds } from "./tractor.js";
+const plantedSeeds = plantSeeds(yearlyPlan)
 
-let morePlants = addPlant(seedObj)
-console.log(morePlants)
-
-let plantUse = usePlants()
-console.log(plantUse)
-
-let plantingSeeds = plantSeeds()
-console.log(plantingSeeds)
-
-import { fieldOfPlants } from "./field.js"
+import { harvestPlants } from "./harvester.js";
+const harvestedPlants = harvestPlants(plantedSeeds)
+console.log(harvestedPlants)
 
 

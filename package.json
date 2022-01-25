@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "## Setup",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "test": "test"
   },
-  "type":"module",
   "scripts": {
     "test": "jest --watchAll --verbose"
   },
@@ -20,3 +20,4 @@
   },
   "dependencies": {}
 }
+

@@ -6,25 +6,26 @@ import { createSoybean } from "./seeds/soybean.js";
 import { createSunflower } from "./seeds/sunflower.js";
 import { createWheat } from "./seeds/wheat.js";
 
-import { yearlyPlan } from "./main.js"
+
 
 
 //Define and export a plantSeeds function.
 //Function must accept the year's planting plan as input.
 //(plantingPlan is a parameter).
 
-export const plantSeeds = (yearlyPlan) => {
+export const plantSeeds = (parentPlan) => {
 
 
-    for (const subPlan of yearlyPlan) {
+    for (const subPlan of parentPlan) {
         for (const plantType of subPlan) {
-            if (subPlan === "asparagus") {
+            if (plantType === "asparagus") {
                 const asparagusSeed = createAsparagus()
                 addPlant(asparagusSeed)
             }
             else if (plantType === "corn") {
                 const cornSeed = createCorn()
-                addPlant(cornSeed)
+                addPlant(cornSeed[0])
+                addPlant(cornSeed[1])
             }
             else if (plantType === "potato") {
                 const potatoSeed = createPotato()
