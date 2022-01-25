@@ -1,7 +1,7 @@
 //Define a variable with initial value being an empty array
     //The array will store plants growing in the field.
 
-const fieldOfPlants = [];
+export const fieldOfPlants = [];
 
 
 //Define and export a function named addPlant.
