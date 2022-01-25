@@ -6,19 +6,18 @@ import {createSoybean} from "./seeds/soybean.js";
 import {createSunflower} from "./seeds/sunflower.js";
 import {createWheat} from "./seeds/wheat.js";
 
-import {newCreatePlan} from "./main.js"
+import {yearlyPlan} from "./main.js"
 
 
 //Define and export a plantSeeds function.
     //Function must accept the year's planting plan as input.
     //(plantingPlan is a parameter).
-let newCreatePlan = []
 
-export const plantSeeds = (newCreatePlan) => {
+export const plantSeeds = (yearlyPlan) => {
     
 
 }
-for (const subPlan of newCreatePlan) {
+for (const subPlan of yearlyPlan) {
     for (const plantType of subPlan) {
         if (subPlan === "asparagus") {
             const asparagusSeed = createAsparagus()
