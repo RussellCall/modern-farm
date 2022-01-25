@@ -3,7 +3,7 @@
 //harvestPlants must return seedObj.
 
 export const harvestPlants = (plantsArray) => {
-    let seedObjects = []
+    let seedObj = []
 
     //Iterate the array of growing plants.
     for (const plant of plantsArray) {
@@ -20,9 +20,9 @@ export const harvestPlants = (plantsArray) => {
 
             for (let i = 0; i< plant.output; i++) {
 
-                seedObjects.push(plant)
+                seedObj.push(plant)
             }
         }
 
-    }return seedObjects
+    }return seedObj
 };
