@@ -13,37 +13,39 @@ import { createWheat } from "./seeds/wheat.js";
 //Function must accept the year's planting plan as input.
 //(plantingPlan is a parameter).
 
-export const plantSeeds = (parentPlan) => {
+export const plantSeeds = (yearlyPlan) => {
+   //*old version* export const plantSeeds = (parentPlan) => {
 
-
-    for (const subPlan of parentPlan) {
-        for (const plantType of subPlan) {
-            if (plantType === "asparagus") {
+    for (const subPlan of yearlyPlan) {
+        for (const plan of subPlan) {
+            ///for (const row of plan)
+            if (plan === "Asparagus") {
                 const asparagusSeed = createAsparagus()
                 addPlant(asparagusSeed)
             }
-            else if (plantType === "corn") {
+            else if (plan === "Corn") {
                 const cornSeed = createCorn()
                 addPlant(cornSeed[0])
                 addPlant(cornSeed[1])
             }
-            else if (plantType === "potato") {
+            else if (plan === "Potato") {
                 const potatoSeed = createPotato()
                 addPlant(potatoSeed)
             }
-            else if (plantType === "soybean") {
+            else if (plan === "Soybean") {
                 const soybeanSeed = createSoybean()
                 addPlant(soybeanSeed)
             }
-            else if (plantType === "sunflower") {
+            else if (plan === "Sunflower") {
                 const sunflowerSeed = createSunflower()
                 addPlant(sunflowerSeed)
             }
-            else if (plantType === "wheat") {
+            else if (plan === "Wheat") {
                 const wheatSeed = createWheat()
                 addPlant(wheatSeed)
             }
         }
-        return usePlants()
+        
     }
+    return usePlants()
 }
